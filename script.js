@@ -14,35 +14,22 @@ var insertIconOfGenderHere = document.getElementById('selected-gender');
 var selectMaleOrFemale = document.getElementById('gender');
 
 
-// female.addEventListener('click', function(){
-
-
-//     var selectedGenderDiv = document.getElementById('selected-gender');
-//     selectedGenderDiv.innerHTML = `
-
-//     <span class="material-symbols-outlined">
-//     female
-//     </span>
-
-//     `
 
 
 
-// })
-
-
-// EVENT.TARGET.VALUE!!!
+selectMaleOrFemale.addEventListener('input', putGenderIcon); 
 
 
 
-selectMaleOrFemale.addEventListener('input', function () {
+function putGenderIcon(event){
     var female = document.getElementById("female");
     var male = document.getElementById("male");
+    console.log("event.target.value")
 
     var selectedGenderDiv = document.getElementById('selected-gender');
 
     for( opt of optionsMaleOrFemale) 
-    if (female) {
+    if (event.target.value === "female") {
 
      
             selectedGenderDiv.innerHTML = `
@@ -55,9 +42,9 @@ selectMaleOrFemale.addEventListener('input', function () {
 
         } 
         
-        if(male){
+        if(event.target.value==="male"){
 
-            // var selectedGenderDiv = document.getElementById('selected-gender');
+ 
             selectedGenderDiv.innerHTML = `
         
         <span class="material-symbols-outlined">
@@ -68,6 +55,6 @@ selectMaleOrFemale.addEventListener('input', function () {
 
         }
 
-})
+}
 
 
