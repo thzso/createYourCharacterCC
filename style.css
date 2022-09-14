@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+#form {
+
+  
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 5rem;
+    
+}
+
+.form-elements {
+   
+
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+#character-sheet {
+    height: 100vh;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    background-color: aquamarine;
+
+}
+
+#charname-div {
+
+    height: 10vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+
+
+}
+
+/* 
+#selected-gender{
+
+    background-color: blueviolet;
+    height: 5rem;
+} */
+.values {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
