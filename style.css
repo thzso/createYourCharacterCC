@@ -71,9 +71,23 @@
 
 }
 
-.images{
+.race-images{
 
     visibility: hidden;
     height: 250px;
     position: absolute;
+}
+
+#class-div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.class-images{
+
+    visibility:hidden;
+    position: absolute;
+
 }

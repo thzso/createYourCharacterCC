@@ -12,82 +12,71 @@ var selectMaleOrFemale = document.getElementById('gender');
 
 
 
-selectMaleOrFemale.addEventListener('input', putGenderIcon); 
+selectMaleOrFemale.addEventListener('input', putGenderIcon);
 
 
-function putGenderIcon(event){
+function putGenderIcon(event) {
 
     var selectedGenderDiv = document.getElementById('selected-gender');
 
-    for( opt of optionsMaleOrFemale) 
-    if (event.target.value === "female") {
+    for (opt of optionsMaleOrFemale)
+    
+        if (event.target.value === "female") {
 
             selectedGenderDiv.innerHTML = `
         <span class="material-symbols-outlined">
         female
         </span> 
         `
-        } 
-        
-        if(event.target.value==="male"){
+        }
 
-            selectedGenderDiv.innerHTML = `
+    if (event.target.value === "male") {
+
+        selectedGenderDiv.innerHTML = `
         <span class="material-symbols-outlined">
         male
         </span>
         `;
-        }
-}
-
-var selectBox = document.querySelector('#race');
-
-var insertSelectedRacePicHereDiv= document.querySelector('#selected-race')
-var imageList = document.getElementsByTagName('img')
-
-// console.log(imageList)
-var imageListArray= Array.from(imageList)
-
-console.log(imageListArray)
-
-var testingImagesClass= document.getElementsByClassName('.images')
-console.log(testingImagesClass)
-
-selectBox.addEventListener('input',makePicVisibleOnCharSheet)
-
-
-
-
-
-
-
-
-var testPara= document.getElementById("test")
-testPara.style.color ="red"
-
-
-
-
-
-
-
-
-
-
-
-
-function makePicVisibleOnCharSheet(event){
-
-    console.log(event.target.value)
-    for (img of imageListArray)
-    if(event.target.value === img.id){
-  
-        img.style.visibility ="visible"
-        console.log("bejött ebbe az elágazásba")
-
-    }else{
-
-        img.style.visibility ="hidden"
     }
-   
-
 }
+
+
+
+
+var selectBoxRace = document.querySelector('#race');
+var selectBoxRaceArray = Array.from(selectBoxRace);
+var imageList = document.getElementsByTagName('img')
+var imageListArray = Array.from(imageList)
+
+
+var selectBoxClass = document.getElementById('class')
+var selectBoxClassOptions = document.getElementsByClassName('class-images')
+
+var selectBoxClassArray = Array.from(selectBoxClassOptions)
+
+
+
+selectBoxRace.addEventListener('input', makePicVisibleOnCharSheet)
+selectBoxClass.addEventListener('input', makePicVisibleOnCharSheet)
+
+function makePicVisibleOnCharSheet(event) {
+
+
+    console.log("selectboxrace.classname: ", selectBoxRace.className)
+    console.log("eventarget.classname: ", event.target.className)
+
+
+    for (img of imageListArray) {
+
+        if (event.target.value === img.id) {
+
+            img.style.visibility = "visible"
+
+        } else {
+
+            img.style.visibility = "hidden"
+        }
+
+    }
+}
+

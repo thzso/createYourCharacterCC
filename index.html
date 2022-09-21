@@ -15,7 +15,7 @@
 
 
     <div id="container">
-        <p id="test" >wregwgwrgwrgwrgwg</p>
+        <p id="test" ></p>
         <div id="form">
 
             <div class="form-elements">
@@ -39,7 +39,7 @@
 
 
             <div class="form-elements"> <label for="race">Race</label>
-                <select id="race">
+                <select id="race" class="race">
                     <option name="race" value="bugbear">Bugbear</option>
                     <option name="race" value="dragonblood">Dragonborn</option>
                     <option  name="race" value="seaelf">Sea Elf</option>
@@ -53,10 +53,10 @@
 
 
             <div class="form-elements"> <label for="class">Class</label>
-                <select id="class">
-                    <option name="class" value=""></option>
-                    <option name="class" value=""></option>
-                    <option name="class" value=""></option>
+                <select id="class" class="class">
+                    <option name="class" value="paladin">Paladin</option>
+                    <option name="class" value="shaman">Shaman</option>
+                    <option name="class" value="druid">Druid</option>
 
 
                 </select>
@@ -75,15 +75,21 @@
 
 
             <div class="values" id="selected-race">
-                <img class="images" id="bugbear" src="images/races/bugbear.webp" alt="">
-                <img class="images" id="dragonblood" src="images/races/dragonblood.webp" alt="">
-                <img class="images" id="seaelf" src="images/races/seaElf.webp" alt="">
-                <img class="images" id="shifter" src="images/races/shifter.png" alt="">
-                <img class="images" id="tiefling" src="images/races/tiefling.webp" alt="">
+                <img class="race-images" id="bugbear" src="images/races/bugbear.webp" alt="">
+                <img class="race-images" id="dragonblood" src="images/races/dragonblood.webp" alt="">
+                <img class="race-images" id="seaelf" src="images/races/seaElf.webp" alt="">
+                <img class="race-images" id="shifter" src="images/races/shifter.png" alt="">
+                <img class="race-images" id="tiefling" src="images/races/tiefling.webp" alt="">
 
 
             </div>
-            <p class="values"></p>
+
+            <div id="class-div">
+                <img id="paladin" class="class-images" src="https://cdn.hearthstonetopdecks.com/wp-content/uploads/2018/02/paladin-class-icon.png" alt="">
+                <img id="shaman" class="class-images" src="https://cdn.hearthstonetopdecks.com/wp-content/uploads/2018/02/shaman-class-icon.png" alt="">
+                <img id="druid" class="class-images" src="https://i.pinimg.com/736x/fa/82/8c/fa828c970d900f4d27ffe0d13f93291a.jpg" alt="">
+            </div>
+        
 
         </div>
     </div>
@@ -94,10 +100,3 @@
 
 
 
-<!-- <span class="material-symbols-outlined">
-    female
-</span> -->
-
-<!-- <span class="material-symbols-outlined">
-    male
-    </span> -->
