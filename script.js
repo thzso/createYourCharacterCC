@@ -20,7 +20,7 @@ function putGenderIcon(event) {
     var selectedGenderDiv = document.getElementById('selected-gender');
 
     for (opt of optionsMaleOrFemale)
-    
+
         if (event.target.value === "female") {
 
             selectedGenderDiv.innerHTML = `
@@ -42,22 +42,12 @@ function putGenderIcon(event) {
 
 
 
-
 var selectBoxRace = document.querySelector('#race');
 var selectBoxRaceArray = Array.from(selectBoxRace);
 var imageList = document.getElementsByTagName('img')
 var imageListArray = Array.from(imageList)
 
-
-var selectBoxClass = document.getElementById('class')
-var selectBoxClassOptions = document.getElementsByClassName('class-images')
-
-var selectBoxClassArray = Array.from(selectBoxClassOptions)
-
-
-
 selectBoxRace.addEventListener('input', makePicVisibleOnCharSheet)
-selectBoxClass.addEventListener('input', makePicVisibleOnCharSheet)
 
 function makePicVisibleOnCharSheet(event) {
 
@@ -79,4 +69,31 @@ function makePicVisibleOnCharSheet(event) {
 
     }
 }
+
+
+
+var selectBoxClass = document.getElementById('class')
+
+selectBoxClass.addEventListener("input",putClassImage)
+
+
+function putClassImage(event) {
+
+    var placeOfClasspic = document.getElementById("class-div")
+
+    var classImages = ["druid-class-icon", "paladin-class-icon", "shaman-class-icon"]
+
+    for (var image of classImages) {
+        if (event.target.value + "-class-icon" === image) {
+console.log("image",image)
+            placeOfClasspic.innerHTML = `
+
+            <img src='images/class/${image}.png' width='200px'>
+
+            `
+
+        }
+    }
+}
+
 
