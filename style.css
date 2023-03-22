@@ -1,103 +1,117 @@
-* {
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Cinzel Decorative", cursive;
+  display: flex;
+  justify-content: center;
+  background: #121110;
 }
 
 .material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
-}
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  color: #ffffff0e;
+  font-size: 150px !important;
+  }
 
-
-
-.form-elements {
-   
-
-}
 
 #container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-
+  max-width: 100vw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #121110;
+  margin: auto;
 }
 
-#form {
-
-    height:50%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    padding-left: 5rem;
-    
+#input-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 24px;
 }
-
-#character-sheet {
-    height: 100vh;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-
-
+label {
+  color: white;
+  min-width: 180px;
 }
-
+input {
+  width: 160px;
+}
+select {
+  width: 170px;
+}
+input,
+select {
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+  text-align: center;
+  background: #928a5e;
+  color: white;
+  font-family: "Cinzel Decorative", cursive;
+}
+input::placeholder {
+  color: white;
+}
+.form-elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#character-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  justify-content: space-between;
+  position: relative;
+  border: 5px solid #928a5e;
+  border-style: inset;
+}
 #charname-div {
+  position: absolute;
+  color: #ffffff38;
 
-    height: 10vh;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-
-
-
+  font-size: 20px;
+  top: 25%;
+  text-shadow: 2px 2px 20px #82b4baab;
+  color: 928a5ebd;
 }
 
-/* 
-#selected-gender{
-
-    background-color: blueviolet;
-    height: 5rem;
-} */
-.values {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-}
-#selected-gender{
-    height: 5rem;
-
+#selected-gender {
+  position: absolute;
+  right: 10%;
+  top: 20%;
 }
 
-#selected-race{
-    height: 20rem;
-
-}
-.race-images{
-
-    visibility: hidden;
-    height: 250px;
-    position: absolute;
+#selected-race {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 400px;
+  margin-bottom: 20px;
 }
 
-#class-div{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
+#selected-race > img {
+  height: 45svh;
+  /* position: absolute; */
 }
-.class-images{
 
-    visibility:hidden;
-    position: absolute;
-
+#selected-class > img {
+  width: 200px;
+  height: 200px;
 }

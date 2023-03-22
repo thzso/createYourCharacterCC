@@ -15,81 +15,74 @@
 
 
     <div id="container">
-        <p id="test" ></p>
-        <div id="form">
 
-            <div class="form-elements">
-                <label for="character-name">Character name</label>
-                <input type="text" id="character-name" placeholder="Enter character name" value="">
-            </div>
+        <div id="input-container">
+          
+                <div class="form-elements">
+                    <label for="character-name">Character name</label>
+                    <div><input type="text" id="character-name" placeholder="name" value="" maxlength="17"></div>
+                </div>
 
-            <div class="form-elements">
-                <label for="gender" class="">Gender</label>
-                <select id="gender">
-                    <option ></option>
-                    <option id="male" name="gender" value="male">male</option>
-                    <option id="female" name="gender" value="female">female </option>
-                   
-                   
-
-
-
-                </select>
-            </div>
+                <div class="form-elements">
+                    <label for="gender" class="">Gender</label>
+                    <select id="gender">
+                        
+                        <option disabled selected>choose</option>
+                        <option id="male" name="gender" value="male">male</option>
+                        <option id="female" name="gender" value="female">female </option>
+                    </select>
+                </div>
 
 
-            <div class="form-elements"> <label for="race">Race</label>
-                <select id="race" class="race">
-                    <option name="race" value="bugbear">Bugbear</option>
-                    <option name="race" value="dragonblood">Dragonborn</option>
-                    <option  name="race" value="seaelf">Sea Elf</option>
-                    <option  name="race" value="tiefling">Tiefling</option>
-                    <option  name="race" value="shifter">Shifter</option>
+                <div class="form-elements" > <label for="race">Race</label>
+                    <select id="race" class="race">
+                        <option value="" disabled selected>choose</option>
+                        <option name="race" value="bugbear">Bugbear</option>
+                        <option name="race" value="dragonblood">Dragonborn</option>
+                        <option name="race" value="seaelf">Sea Elf</option>
+                        <option name="race" value="tiefling">Tiefling</option>
+                        <option name="race" value="shifter">Shifter</option>
 
 
-                </select>
-            </div>
+                    </select>
+                </div>
 
 
 
-            <div class="form-elements"> <label for="class">Class</label>
-                <select id="class" class="class">
-                    <option name="class" value="paladin">Paladin</option>
-                    <option name="class" value="shaman">Shaman</option>
-                    <option name="class" value="druid">Druid</option>
+                <div class="form-elements"> <label for="class">Class</label>
+                    <select id="class" class="class">
+                        <option value="" disabled selected>choose</option>
+                        <option name="class" value="paladin">Paladin</option>
+                        <option name="class" value="shaman">Shaman</option>
+                        <option name="class" value="druid">Druid</option>
 
 
-                </select>
-            </div>
+                    </select>
+                </div>
+     
+
 
 
         </div>
 
 
-        <div id="character-sheet">
-            <div id="charname-div">
-                <p id="write-here" class="values"></p>
-            </div>
+        <div id="character-container">
 
             <div class="values" id="selected-gender"></div>
 
+            <div id="charname-div">
+                <h1 id="write-here" class="values"></h1>
+            </div>
+
+
+
+
+            <div id="selected-class">
+            </div>
 
             <div class="values" id="selected-race">
-                <img class="race-images" id="bugbear" src="images/races/bugbear.webp" alt="">
-                <img class="race-images" id="dragonblood" src="images/races/dragonblood.webp" alt="">
-                <img class="race-images" id="seaelf" src="images/races/seaElf.webp" alt="">
-                <img class="race-images" id="shifter" src="images/races/shifter.png" alt="">
-                <img class="race-images" id="tiefling" src="images/races/tiefling.webp" alt="">
-
-
             </div>
 
-            <div id="class-div">
-                <!-- <img id="paladin" class="class-images" src="https://cdn.hearthstonetopdecks.com/wp-content/uploads/2018/02/paladin-class-icon.png" alt="">
-                <img id="shaman" class="class-images" src="https://cdn.hearthstonetopdecks.com/wp-content/uploads/2018/02/shaman-class-icon.png" alt="">
-                <img id="druid" class="class-images" src="https://i.pinimg.com/736x/fa/82/8c/fa828c970d900f4d27ffe0d13f93291a.jpg" alt=""> -->
-            </div>
-        
 
         </div>
     </div>
@@ -97,6 +90,3 @@
 </body>
 
 </html>
-
-
-

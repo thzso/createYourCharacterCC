@@ -1,99 +1,88 @@
-var input = document.querySelector('input')
-var writeHere = document.getElementById('write-here')
+const input = document.querySelector("input");
+const writeHere = document.getElementById("write-here");
 
-input.addEventListener('input', updateValue)
+const selectBoxClass = document.getElementById("class");
+const selectBoxRace = document.querySelector("#race");
+const selectedRaceDiv = document.getElementById("selected-race");
+const selectedClassDiv = document.getElementById("selected-class");
 
-function updateValue(event) {
-    writeHere.textContent = event.target.value
+input.addEventListener("input", displayName);
+
+function displayName(event) {
+  writeHere.textContent = event.target.value;
 }
 
-var optionsMaleOrFemale = document.getElementsByName('gender');
-var selectMaleOrFemale = document.getElementById('gender');
+const optionsMaleOrFemale = document.getElementsByName("gender");
+const selectMaleOrFemale = document.getElementById("gender");
 
-
-
-selectMaleOrFemale.addEventListener('input', putGenderIcon);
-
+selectMaleOrFemale.addEventListener("input", putGenderIcon);
 
 function putGenderIcon(event) {
+  const selectedGenderDiv = document.getElementById("selected-gender");
 
-    var selectedGenderDiv = document.getElementById('selected-gender');
-
-    for (opt of optionsMaleOrFemale)
-
-        if (event.target.value === "female") {
-
-            selectedGenderDiv.innerHTML = `
+  for (opt of optionsMaleOrFemale)
+    if (event.target.value === "female") {
+      selectedGenderDiv.innerHTML = `
         <span class="material-symbols-outlined">
         female
         </span> 
-        `
-        }
+        `;
+    }
 
-    if (event.target.value === "male") {
-
-        selectedGenderDiv.innerHTML = `
+  if (event.target.value === "male") {
+    selectedGenderDiv.innerHTML = `
         <span class="material-symbols-outlined">
         male
         </span>
         `;
-    }
+  }
 }
 
+const images = [
+  { id: "bugbear", url: "images/races/bugbear.webp" },
+  {
+    id: "dragonblood",
+    url: "images/races/dragonblood.webp",
+  },
+  {
+    id: "seaelf",
+    url: "images/races/seaElf.webp",
+  },
+  {
+    id: "shifter",
+    url: "images/races/shifter.png",
+  },
+  {
+    id: "tiefling",
+    url: "images/races/tiefling.webp",
+  },
+  {
+    id: "druid",
+    url: "images/class/druid-class-icon.png",
+  },
+  {
+    id: "paladin",
+    url: "images/class/paladin-class-icon.png",
+  },
+  {
+    id: "shaman",
+    url: "images/class/shaman-class-icon.png",
+  },
+];
 
+selectBoxRace.addEventListener("input", insertSelected);
+selectBoxClass.addEventListener("input", insertSelected);
 
-var selectBoxRace = document.querySelector('#race');
-var selectBoxRaceArray = Array.from(selectBoxRace);
-var imageList = document.getElementsByTagName('img')
-var imageListArray = Array.from(imageList)
+function insertSelected(event) {
+  const insertHere =
+    event.target.id === "race" ? selectedRaceDiv : selectedClassDiv;
 
-selectBoxRace.addEventListener('input', makePicVisibleOnCharSheet)
+  insertHere.innerHTML = "";
 
-function makePicVisibleOnCharSheet(event) {
+  const img = document.createElement("img");
+  img.src = images.find((obj) => obj.id === event.target.value).url;
 
-
-    console.log("selectboxrace.classname: ", selectBoxRace.className)
-    console.log("eventarget.classname: ", event.target.className)
-
-
-    for (img of imageListArray) {
-
-        if (event.target.value === img.id) {
-
-            img.style.visibility = "visible"
-
-        } else {
-
-            img.style.visibility = "hidden"
-        }
-
-    }
-}
-
-
-
-var selectBoxClass = document.getElementById('class')
-
-selectBoxClass.addEventListener("input",putClassImage)
-
-
-function putClassImage(event) {
-
-    var placeOfClasspic = document.getElementById("class-div")
-
-    var classImages = ["druid-class-icon", "paladin-class-icon", "shaman-class-icon"]
-
-    for (var image of classImages) {
-        if (event.target.value + "-class-icon" === image) {
-console.log("image",image)
-            placeOfClasspic.innerHTML = `
-
-            <img src='images/class/${image}.png' width='200px'>
-
-            `
-
-        }
-    }
+  insertHere.appendChild(img);
 }
 
 
